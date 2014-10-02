@@ -5,7 +5,7 @@
 
 // This example covers basic object oriented programming in Swift.
 
-// My Grandma has a cookie container... and nothing bad happens when I put two different types of cookies in it at the same time. And surely enough, I can even throw some rose petals in there too. Again, nothing bad happens... and the same can be true in Swift. We can create a container (an array) that can contain any object. But when you grab an object out of the cookie container, you need to check what type of object it is before you eat it ;) In Swift this involves downcasting. You surely don't want to eat rose petals...
+// My Grandma has a cookie container... and nothing bad happens when I put two different types of cookies in it at the same time. And surely enough, I can even throw some rose petals in there too. Again, nothing bad happens... and the same can be true in Swift. We can create a container (an Array) which can contain any object. But when you grab an object out of the cookie container, you need to check what type of object it is before you eat it ;) In Swift this involves downcasting. You surely don't want to eat rose petals...
 
 import UIKit
 
@@ -79,12 +79,12 @@ for i in 0..<cookieContainer.count {
     
     if let item = item as? String {
         // If it's a String, let's print that to the console.
-        println("Item number " + String(i) + " says " + item)
+        println("Item number \(i) says \(item)")
     }
     
     if let item = item as? Cookie {
-        // If it's a Cookie then we know that it has a description property, so lets print that to the console. At this point we know it is safe to eat ;)
-        println("Item number " + String(i) + " says " + item.description)
+        // If it's a Cookie then we know that it has a description property, so lets print that to the console. At this point we know it is safe to eat!
+        println("Item number \(i) says \(item.description)")
         if item as? Snickerdoodle != nil {
             // If it reaches this point then it's a Snickerdoodle.
             println("And we can tell it was a Snickerdoodle.\n")
@@ -97,7 +97,7 @@ for i in 0..<cookieContainer.count {
     
     if let item = item as? RosePetal {
         // Better not eat this one ;)
-        println("Item " + String(i) + " is a rose petal.")
+        println("Item \(i) is a rose petal.")
     }
 }
 
